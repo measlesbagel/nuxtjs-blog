@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col relative min-h-screen">
+  <div class="flex flex-col relative min-h-screen px-8 md:px-0">
     <navbar />
     <section
       class="container banner-wrapper relative w-full py-4 mb-8 md:grid md:gap-8 md:items-center md:mx-auto"
@@ -23,11 +23,27 @@
         />
       </div>
     </section>
+    <section class="container mx-auto pt-10">
+      <h2 class="font-bold mb-4 text-4xl">Latest Blog Posts</h2>
+      <div class="flex flex-row justify-between">
+        <div v-for="doc in docs" :key="doc.slug">
+          <nuxt-link :to="doc.path">{{ doc.title }}</nuxt-link>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto pt-10">
+      <h2 class="font-bold mb-4 text-4xl">Latest Projects</h2>
+    </section>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, params }) {
+    const docs = await $content('blog-posts').sortBy('date').fetch()
+    return { docs }
+  },
+}
 </script>
 
 <style>
