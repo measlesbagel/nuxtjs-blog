@@ -11,6 +11,7 @@
     font-family: 'Inter var', sans-serif;
   }
 }
+
 html {
   font-family: 'Inter', sans-serif;
   font-size: 16px;

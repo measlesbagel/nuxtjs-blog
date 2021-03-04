@@ -1,5 +1,5 @@
 <template>
-  <div class="layout flex flex-col relative min-h-screen">
+  <div class="flex flex-col relative min-h-screen">
     <navbar />
     <section
       class="container banner-wrapper relative w-full py-4 mb-8 md:grid md:gap-8 md:items-center md:mx-auto"
