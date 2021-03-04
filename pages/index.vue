@@ -1,27 +1,28 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nuxtjs-blog</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="layout flex flex-col relative min-h-screen">
+    <navbar />
+    <section
+      class="container banner-wrapper relative w-full py-4 mb-8 md:grid md:gap-8 md:items-center md:mx-auto"
+    >
+      <div class="text-left">
+        <p class="font-semibold text-2xl m-0 mb-2 leading-snug">
+          hello my name is
+        </p>
+        <h1 class="font-black text-6xl mb-4 leading-none">Myles Cagle</h1>
+        <p class="p-sm">
+          Welcome to my blog! Hopefully you find something interesting.
+        </p>
       </div>
-    </div>
+      <div class="hidden md:block">
+        <img
+          class="rounded-3xl block w-full h-full"
+          src="../static/profile.jpeg"
+          alt=""
+          width="128"
+          height="128"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -35,34 +36,9 @@ export default {}
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media (min-width: 768px) {
+  .banner-wrapper {
+    grid-template-columns: 45% 1fr;
+  }
 }
 </style>
