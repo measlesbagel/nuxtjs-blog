@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const docs = await $content('blog-posts').sortBy('date').fetch()
     return { docs }
   },
