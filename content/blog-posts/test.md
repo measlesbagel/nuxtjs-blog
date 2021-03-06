@@ -1,6 +1,7 @@
 ---
 title: blog-test
-excerpt: information about the test blog
+description: information about the test blog
+image: https://tailwindcss.com/img/card-top.jpg
 date: 3/4/2021
 ---
 

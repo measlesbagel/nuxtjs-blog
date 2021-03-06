@@ -2,16 +2,35 @@
 
 @layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-4xl font-black;
+  }
+  @screen md {
+    h1 {
+      @apply text-6xl;
+    }
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl font-bold;
+  }
+  @screen md {
+    h2 {
+      @apply text-4xl;
+    }
   }
   h3 {
-    @apply text-lg;
+    @apply text-xl font-semibold;
+  }
+  @screen md {
+    h3 {
+      @apply text-2xl;
+    }
   }
 }
 
 @tailwind components;
 
 @tailwind utilities;
+
+.card {
+  @apply max-w-sm rounded-lg overflow-hidden shadow-lg;
+}

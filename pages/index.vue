@@ -1,14 +1,12 @@
 <template>
-  <div class="flex flex-col relative min-h-screen px-8 md:px-0">
+  <div class="flex flex-col relative min-h-screen px-8 md:px-4 lg:px-0">
     <navbar />
     <section
       class="container banner-wrapper relative w-full py-4 mb-8 md:grid md:gap-8 md:items-center md:mx-auto"
     >
       <div class="text-left">
-        <p class="font-semibold text-2xl m-0 mb-2 leading-snug">
-          hello my name is
-        </p>
-        <h1 class="font-black text-6xl mb-4 leading-none">Myles Cagle</h1>
+        <h3 class="m-0 mb-2 leading-snug">hello my name is</h3>
+        <h1 class="mb-4 leading-none">Myles Cagle</h1>
         <p class="p-sm">
           Welcome to my blog! Hopefully you find something interesting.
         </p>
@@ -24,15 +22,25 @@
       </div>
     </section>
     <section class="container mx-auto pt-10">
-      <h2 class="font-bold mb-4 text-4xl">Latest Blog Posts</h2>
-      <div class="flex flex-row justify-between">
-        <div v-for="doc in docs" :key="doc.slug">
-          <nuxt-link :to="doc.path">{{ doc.title }}</nuxt-link>
+      <h2 class="mb-4">Latest Blog Posts</h2>
+      <div
+        class="grid grid-flow-col grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-4 justify-between"
+      >
+        <div v-for="blog in posts" :key="blog.slug">
+          <nuxt-link :to="blog.path">
+            <div class="card col-start-auto" :to="blog.path">
+              <img :src="blog.image" alt="" class="w-full" />
+              <div class="p-3">
+                <h3>{{ blog.title }}</h3>
+                <p class="text-sm">{{ blog.description }}</p>
+              </div>
+            </div>
+          </nuxt-link>
         </div>
       </div>
     </section>
     <section class="container mx-auto pt-10">
-      <h2 class="font-bold mb-4 text-4xl">Latest Projects</h2>
+      <h2 class="mb-4">Latest Projects</h2>
     </section>
   </div>
 </template>
@@ -40,8 +48,11 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const docs = await $content('blog-posts').sortBy('date').fetch()
-    return { docs }
+    const posts = await $content('blog-posts')
+      .sortBy('date', 'desc')
+      .limit(3)
+      .fetch()
+    return { posts }
   },
 }
 </script>

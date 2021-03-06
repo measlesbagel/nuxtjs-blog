@@ -1,12 +1,12 @@
 <template>
   <header class="flex justify-center mb-6 h-20">
-    <div class="container flex items-center justify-between">
+    <div class="container flex items-center justify-between md:text-lg">
       <div>
         <a href="/">
           <strong>home</strong>
         </a>
       </div>
-      <nav class="ml-auto">
+      <nav class="ml-auto md:text">
         <ul class="flex">
           <li class="font-semibold lowercase ml-6">
             <a href="">about</a>
