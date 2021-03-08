@@ -35,14 +35,14 @@
   @apply rounded-2xl overflow-hidden shadow-lg border-b border-gray-200 pt-3 px-3;
 }
 
-.disabledStyle {
-  @apply opacity-50 font-bold bg-blue-500 text-white py-2 px-4 rounded mx-1;
+.btn-enabled {
+  @apply opacity-100 py-2 px-4;
 }
 
-.buttonStyle {
-  @apply font-bold bg-blue-500 text-white py-2 px-4 rounded mx-1;
+.btn-enabled:hover {
+  @apply bg-none;
 }
 
-.buttonStyle:hover {
-  @apply bg-blue-700;
+.btn-disabled {
+  @apply opacity-50 pointer-events-none py-2 px-4;
 }
