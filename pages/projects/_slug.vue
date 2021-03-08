@@ -17,7 +17,7 @@ import navbar from '~/../nuxtjs-blog/components/navbar.vue'
 export default {
 	components: { navbar },
 	async asyncData({ $content, params }) {
-		const doc = await $content(`blog-posts/${params.slug}`).fetch()
+		const doc = await $content(`projects/${params.slug}`).fetch()
 
 		return { doc }
 	},
