@@ -11,9 +11,11 @@
           Welcome to my blog! Hopefully you find something interesting.
         </p>
       </div>
-      <div class="hidden md:block">
+      <div
+        class="hidden md:block card transform rotate-6 rounded-3xl border-2 border-gray-200"
+      >
         <img
-          class="rounded-3xl block w-full h-full shadow-lg border-2 border-gray-200"
+          class="rounded-3xl block w-full h-full shadow-lg mb-10 lg:mb-16"
           src="../static/profile.jpeg"
           alt=""
           width="128"

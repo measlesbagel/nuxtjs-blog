@@ -32,7 +32,7 @@
 @tailwind utilities;
 
 .card {
-  @apply rounded-2xl overflow-hidden shadow-lg border-b border-gray-200 pt-3 px-3;
+  @apply rounded-2xl overflow-hidden shadow-lg border-b border-r border-gray-200 pt-3 px-3;
 }
 
 .btn-enabled {
