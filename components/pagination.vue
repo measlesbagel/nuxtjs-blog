@@ -61,15 +61,4 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.disabledStyle {
-  @apply opacity-50 font-bold bg-blue-500 text-white py-2 px-4 rounded mx-1;
-}
-
-.buttonStyle {
-  @apply font-bold bg-blue-500 text-white py-2 px-4 rounded mx-1;
-}
-
-.buttonStyle:hover {
-  @apply bg-blue-700;
-}
 </style>
