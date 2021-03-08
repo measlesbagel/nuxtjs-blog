@@ -1,11 +1,11 @@
 <template>
-	<div></div>
+  <div></div>
 </template>
 
 <script>
 export default {
-	middleware({ redirect }) {
-		return redirect('301', '/blog-posts/page/1')
-	},
+  middleware({ redirect }) {
+    return redirect('301', '/blog-posts/page/1')
+  },
 }
 </script>
