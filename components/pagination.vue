@@ -1,7 +1,7 @@
 <template>
-  <div class="container mt-8 flex justify-between px-4 md:px-8">
+  <div class="container mt-8 flex justify-between">
     <nuxt-link
-      :to="{ name: 'blog-posts-page-page', params: { page: prevPage } }"
+      :to="{ params: { page: prevPage } }"
       class="flex items-center font-semibold text-xl"
       :class="{
         'btn-enabled': currentPage > 1,
@@ -33,7 +33,7 @@
     </div>
 
     <nuxt-link
-      :to="{ name: 'blog-posts-page-page', params: { page: nextPage } }"
+      :to="{ params: { page: nextPage } }"
       class="flex items-center font-semibold text-xl"
       :class="{
         'btn-enabled': currentPage < totalPages,

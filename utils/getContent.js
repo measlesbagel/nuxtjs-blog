@@ -3,7 +3,7 @@ export default async ($content, params, error) => {
 
   const perPage = 9
 
-  const allArticles = await $content('blog-posts').fetch()
+  const allArticles = await $content('blog-posts', { deep: true }).fetch()
 
   const skipNumber = () => {
     if (currentPage === 1) {
@@ -12,7 +12,7 @@ export default async ($content, params, error) => {
     return (currentPage - 1) * perPage
   }
 
-  const paginatedArticles = await $content('blog-posts')
+  const paginatedArticles = await $content('blog-posts', { deep: true })
     .sortBy('createdAt', 'desc')
     .limit(perPage)
     .skip(skipNumber())

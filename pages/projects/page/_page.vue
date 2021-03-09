@@ -9,7 +9,7 @@
       </h1>
       <bloglist :posts="paginatedArticles" />
       <div v-if="allArticles.length">
-        <pagination v-if="allArticles.length > 9" :total="allArticles.length" />
+        <pagination :total="allArticles.length" />
       </div>
     </section>
   </div>
