@@ -2,7 +2,7 @@
   <div class="container mt-8 flex justify-between px-4 md:px-8">
     <nuxt-link
       :to="{ name: 'blog-posts-page-page', params: { page: prevPage } }"
-      class="flex items-end"
+      class="flex items-center font-semibold text-xl"
       :class="{
         'btn-enabled': currentPage > 1,
         'btn-disabled': currentPage <= 1,
@@ -10,32 +10,31 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        fill="currentColor"
-        class="bi bi-chevron-double-left pr-1"
-        viewBox="0 0 20 20"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="w-6 mr-2"
       >
         <path
-          fill-rule="evenodd"
-          d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-        />
-        <path
-          fill-rule="evenodd"
-          d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
         />
       </svg>
 
       Newer
     </nuxt-link>
 
-    <div class="py-2">
-      <span class="mx-1"> {{ currentPage }} of {{ totalPages }}</span>
+    <div class="items center py-2">
+      <span class="mx-1 font-semibold text-xl">
+        {{ currentPage }} of {{ totalPages }}</span
+      >
     </div>
 
     <nuxt-link
       :to="{ name: 'blog-posts-page-page', params: { page: nextPage } }"
-      class="flex items-end"
+      class="flex items-center font-semibold text-xl"
       :class="{
         'btn-enabled': currentPage < totalPages,
         'btn-disabled': currentPage >= totalPages,
@@ -45,19 +44,16 @@
       <div class="items-end">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-chevron-double-right pl-1"
-          viewBox="0 0 20 20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 font ml-2"
         >
           <path
-            fill-rule="evenodd"
-            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"
-          />
-          <path
-            fill-rule="evenodd"
-            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+            d="M13 5l7 7-7 7M5 5l7 7-7 7"
           />
         </svg>
       </div>
