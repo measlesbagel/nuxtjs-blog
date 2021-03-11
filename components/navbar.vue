@@ -3,10 +3,10 @@
     <div class="container flex items-center justify-between md:text-lg">
       <div>
         <a href="/">
-          <strong>home</strong>
+          <strong class="font-semibold md:text-xl">home</strong>
         </a>
       </div>
-      <nav class="ml-auto md:text">
+      <nav class="ml-auto md:text md:text-xl">
         <ul class="flex">
           <li class="font-semibold lowercase ml-6">
             <a href="/about">about</a>

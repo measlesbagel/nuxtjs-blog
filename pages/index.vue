@@ -24,11 +24,11 @@
       </div>
     </section>
     <section class="container mx-auto pt-10">
-      <h2 class="mb-4">Latest Blog Posts</h2>
+      <h2 class="mb-4 font-extrabold">Latest Blog Posts</h2>
       <bloglist :posts="blogs" />
     </section>
     <section class="container mx-auto pt-10">
-      <h2 class="mb-4">Latest Projects</h2>
+      <h2 class="mb-4 font-extrabold">Latest Projects</h2>
       <div class="justify-center">
         <bloglist :posts="projs" />
       </div>
