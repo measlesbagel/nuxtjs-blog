@@ -10,7 +10,7 @@
     }
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold text-nord0;
   }
   @screen md {
     h2 {
@@ -25,7 +25,7 @@
       @apply text-2xl;
     }
     html {
-      @apply bg-nord6 text-nord1;
+      @apply bg-gradient-to-b from-white via-nord6 to-nord4 text-nord1;
     }
   }
 }

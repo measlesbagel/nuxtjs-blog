@@ -1,8 +1,8 @@
 <template>
-  <div class="overflow-auto flex justify-start flex-wrap w-full md:ml-3">
+  <div class="overflow-auto flex justify-start flex-wrap w-full md:ml-8">
     <div v-for="blog in posts" :key="blog.slug">
       <nuxt-link :to="blog.path">
-        <div class="card mx-3 mb-4" :to="blog.path">
+        <div class="card mx-4 mb-6" :to="blog.path">
           <img
             :src="blog.image"
             alt=""

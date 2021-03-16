@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col relative min-h-screen px-4 md:px-8">
+  <div class="flex flex-col relative min-h-screen px-4 md:px-8 mb-12">
     <navbar />
     <section
       class="container banner-wrapper relative w-full py-4 mb-8 md:grid md:gap-8 md:items-center md:mx-auto"
@@ -12,7 +12,7 @@
         </p>
       </div>
       <div
-        class="hidden md:block card transform rotate-6 rounded-3xl border-2 border-gray-200"
+        class="hidden md:block card transform rotate-6 rounded-3xl border-2 border-nord6 border-opacity-25"
       >
         <img
           class="rounded-3xl block w-full h-full shadow-lg mb-10 lg:mb-16"
@@ -23,12 +23,12 @@
         />
       </div>
     </section>
-    <section class="container mx-auto pt-10">
-      <h2 class="mb-4 font-extrabold">Latest Blog Posts</h2>
+    <section class="container mx-auto pt-24">
+      <h2 class="mb-10 text-5xl font-extrabold">Latest Blog Posts</h2>
       <bloglist :posts="blogs" />
     </section>
-    <section class="container mx-auto pt-10">
-      <h2 class="mb-4 font-extrabold">Latest Projects</h2>
+    <section class="container mx-auto pt-24">
+      <h2 class="mb-10 text-5xl font-extrabold">Latest Projects</h2>
       <div class="justify-center">
         <bloglist :posts="projs" />
       </div>
