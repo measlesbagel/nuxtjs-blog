@@ -25,7 +25,7 @@
       @apply text-2xl;
     }
     html {
-      @apply bg-gradient-to-b from-white via-nord6 to-nord4 text-nord1;
+      @apply bg-nord6 text-nord1;
     }
   }
 }
